@@ -10,7 +10,9 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
+        scrolledUnderElevation: 0,
         actions: [
           IconButton(
               onPressed: () {},
@@ -50,7 +52,9 @@ class HomePage extends StatelessWidget {
                   });
             } else {
               return const Center(
-                child: CircularProgressIndicator(),
+                child: CircularProgressIndicator(
+                  color: Colors.black,
+                ),
               );
             }
           },

@@ -15,9 +15,8 @@ class UpdateProductPage extends StatefulWidget {
 }
 
 class _UpdateProductPageState extends State<UpdateProductPage> {
-  String? productName, desc, image;
+  String? productName, desc, image, price;
 
-  String? price;
   bool isLoading = false;
   @override
   Widget build(BuildContext context) {
@@ -26,6 +25,7 @@ class _UpdateProductPageState extends State<UpdateProductPage> {
     return ModalProgressHUD(
       inAsyncCall: isLoading,
       child: Scaffold(
+        backgroundColor: Colors.white,
         appBar: AppBar(
           title: const Text(
             'Update Product',
@@ -33,8 +33,8 @@ class _UpdateProductPageState extends State<UpdateProductPage> {
               color: Colors.black,
             ),
           ),
-          backgroundColor: Colors.transparent,
           elevation: 0,
+          backgroundColor: Colors.white,
           centerTitle: true,
         ),
         body: Padding(
@@ -97,6 +97,7 @@ class _UpdateProductPageState extends State<UpdateProductPage> {
                     }
                     isLoading = false;
                     setState(() {});
+                    Navigator.pop(context);
                   },
                 ),
               ],
