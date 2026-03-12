@@ -138,7 +138,6 @@ The UI is built using reusable widgets including:
 
 <div align="center">
   <img src="screenshots/Screenshot1.png" width="250">
-  
   <img src="screenshots/Screenshot2.png" width="250">
 </div>
 
